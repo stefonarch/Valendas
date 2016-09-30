@@ -155,7 +155,7 @@ QuickLaunch
    border-radius:4px;
 }
 #QuickLaunch QToolButton:hover{
-   background-color:gba(0, 0, 0, 45%);
+   background-color:rgba(0, 0, 0, 45%);
    border: 1px solid black;
    border-radius:3px;
 }

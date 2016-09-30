@@ -47,19 +47,25 @@ Search field
    background: rgba(0, 0, 0, 45%);
    border-radius:2px;
    font:13px dejavu-sans;
-   color:white
+   color:white;
+   selection-background-color: rgba(0, 0, 0, 65%);
 }
 
 /*
-Search results list, seems not working, except background
+Search results list
 */
 #commandList {
-   border: 1px solid #4C4C4C;
+   border: 1px solid #878a8a;
+   background:rgba(220, 220, 220, 55%);
+   alternate-background-color:rgba(220, 220,220, 25%);
+   selection-color: #e5e5e5;
+   selection-background-color:rgba(0, 0, 0, 75%);
 }
 
-#commandList::item {
+#commandList::item /*bug? Is not considered at all*/{
    margin: 2px;
    padding: 2px;
+   color:red;
 }
 
 /*
