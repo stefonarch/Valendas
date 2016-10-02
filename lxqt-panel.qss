@@ -94,24 +94,29 @@ QMenu::separator {
    margin:0px;
    height:1px
 }
+QMenu QToolButton {
+   background-color: rgba(0, 0, 0, 80%);
+   padding: 5px;
+   border: transparent;
+   font: bold;
+   color:#dcdcdc;
+   border-bottom:1px solid white;
+}
 /*
 Main menu plugin
 */
 #MainMenuPlugin {
    padding: 0px;
-   margin:1px;
+
 }
 #MainMenu {
    qproperty-icon: url(mainmenu.svg);
    background-color:rgba(0,0,0, 10%);
-   border-radius: 3px;
    margin-right:5px;
    color:black;
-   padding:2px 5px;
 }
 #MainMenu:hover {
    background-color:rgba(0, 0, 0, 45%);
-   border: 1px solid black;
 }
 #MainMenu:pressed {
    padding: 3px;
@@ -121,11 +126,11 @@ Main menu plugin
    padding: 6px;
    color: white;
    border-radius: 0px;
-   background:rgba(0, 0, 0, 45%);
+   background:rgba(0, 0, 0, 75%);
 }
 #MainMenu ActionView {
    border: none;
-   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #adadad, stop:1 #d1dedd);
+   background-color:rgba(0, 0, 0, 45%);
    margin-right:5px;
    margin-top:5px;
 }
@@ -136,8 +141,12 @@ Main menu plugin
    color:black;
 }
 #MainMenu ActionView::item:hover {
-   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #adadad, stop:1 #d1dedd);
-   color:black;
+   background-color:rgba(0, 0, 0, 20%);
+   color:white;
+}
+#MainMenu ActionView::item:selected{
+   background-color:rgba(0, 0, 0, 70%);
+   color:white;
 }
 /*
 QuickLaunch
@@ -168,20 +177,20 @@ TaskBar
 #TaskBar QToolButton{
    margin: 2px;
    padding: 2px;
-   background-color:rgba(0,0,0, 10%);
+   background-color:rgba(0,0,0, 40%);
    border-radius:3px;
    border: 1px solid #4c4c4c;
 }
 #TaskBar QToolButton:on{
-   background-color:rgba( 0, 0, 0, 50%);
+   background-color:rgba( 0, 0, 0, 60%);
    border: 1px solid #939393;
+   font:bold;
 }
 #TaskBar QToolButton:hover{
-   background-color:rgba(0, 0, 0, 45%);
-   border: 1px solid black;
+   background-color:rgba(0, 0, 0, 60%);
 }
 #TaskBar QToolButton:pressed {
-   border-top: 2px solid transparent;
+   border-top: 2px solid #4c4c4c;
 }
 #TaskBar QToolButton[urgent="true"] {
    color: #ec5a5c;
@@ -313,8 +322,7 @@ Clocks
 #WorldClock{
    padding: 2px;
    background-color:#2e2f2f;
-   border-radius:3px;
-   margin:2px;
+   margin:0;
 }
 #Clock > QWidget{
    margin: 2px;
@@ -416,7 +424,7 @@ Desktopswitch
 
 }
 #DesktopSwitch QToolButton:pressed {
-   border-top: 2px solid transparent;
+   border-top: 2px solid #4c4c4c;
 }
 #DesktopSwitch QToolButton[urgent="true"] {
    color: palette(highlighted-text);

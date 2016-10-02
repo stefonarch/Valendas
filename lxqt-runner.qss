@@ -4,7 +4,7 @@ Popup
 
 #panel {
    background-color:rgba(0, 0, 0, 30%);
-   border: 1px solid black;
+   border: 1px solid #878a8a;
    padding: 2px;
    margin: 0px;
 }
@@ -56,6 +56,7 @@ Search results list
 */
 #commandList {
    border: 1px solid #878a8a;
+   border-top:1px solid transparent;
    background:rgba(220, 220, 220, 55%);
    alternate-background-color:rgba(220, 220,220, 25%);
    selection-color: #e5e5e5;
@@ -65,7 +66,6 @@ Search results list
 #commandList::item /*bug? Is not considered at all*/{
    margin: 2px;
    padding: 2px;
-   color:red;
 }
 
 /*
