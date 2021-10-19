@@ -57,7 +57,7 @@ LXQtPanelPlugin > QToolButton:pressed {
 Menus
 */
 QMenu {
-   background:rgba(220, 220, 220, 40%);
+   background:rgba(100, 100, 100, 50%);
    border-radius:3px;
 }
 
@@ -70,7 +70,7 @@ QMenu::icon {
 QMenu::item {
    color: #f1f3f3;
    border: 1px solid transparent;
-   padding: 5px 10px 5px 25px;
+   padding: 5px 30px 5px 10px;
    background:rgba(0, 0, 0, 55%);
 }
 
@@ -113,7 +113,7 @@ Main menu plugin
    qproperty-icon: url(mainmenu.svg);
    background-color:rgba(0,0,0, 10%);
    margin-right:5px;
-   color:black;
+   color:#ebebeb;
 }
 #MainMenu:hover {
    background-color:rgba(0, 0, 0, 45%);
@@ -175,29 +175,28 @@ QuickLaunch
 TaskBar
 */
 #TaskBar QToolButton{
-   margin: 2px;
+   margin: 2px 1px;
    padding: 2px;
-   background-color:rgba(0,0,0, 40%);
+   background-color:rgba( 80, 80, 80, 80%);
    border-radius:3px;
-   border: 1px solid #4c4c4c;
+   border: 1px solid #26233a;
 }
 #TaskBar QToolButton:on{
-   background-color:rgba( 0, 0, 0, 60%);
+   background-color:rgba( 40, 40, 40, 80%);
    border: 1px solid #939393;
    font:bold;
 }
 #TaskBar QToolButton:hover{
-   background-color:rgba(0, 0, 0, 60%);
+   background-color:rgba(70, 70, 70, 80%);
 }
 #TaskBar QToolButton:pressed {
-   border-top: 2px solid #4c4c4c;
+   padding: 4px;
 }
 #TaskBar QToolButton[urgent="true"] {
-   color: #ec5a5c;
-   background: #020202;
+   border: 1px solid #fe2327;
 }
 #TaskBar LXQtGroupPopup {
-   background: rgba(0, 0, 0, 10%);
+   background: rgba(100, 100, 100, 80%);
    border: 1px solid black;
 }
 /*
@@ -284,14 +283,14 @@ VolumePopup {
 }
 VolumePopup  > QPushButton {
    color: white;
-   background:rgba(0,0,0,40%);
+   background:rgba(0,0,0,30%);
    padding: 2px 10px;
    margin: 3px;
    border: none;
    qproperty-iconSize: 20px;
 }
 VolumePopup  > QPushButton:hover {
-   background-color:rgba(0,0,0,70%); 
+   background-color:rgba(0,0,0,70%);
    color:white;
    border-radius:3px;
 }
@@ -315,28 +314,58 @@ VolumePopup  > QSlider::sub-page:vertical {
    background: rgba(0, 0, 0, 80%);
    border-radius: 3px;
 }
-/*
-Clocks
-*/
-#Clock,
-#WorldClock{
-   padding: 2px;
-   background-color:#2e2f2f;
-   margin:0;
-}
-#Clock > QWidget{
-   margin: 2px;
-}
-#Clock QLabel{
-   margin: 2px;
-   color: #f1f1f1;
-   qproperty-alignment: alignCenter;
-   background-color:#2e2f2f;
-   }
-   #Clock QLabel:hover{
-   color:#c8c8c8;
-}
 
+/*
+ * Backlight
+ */
+#BacklightPlugin QToolButton:hover {
+   background-color:rgba(0, 0, 0, 45%);
+   border: 1px solid black;
+}
+#BacklightPlugin QToolButton:pressed {
+   padding: 4px;
+}
+#Backlight > SliderDialog > QToolButton {
+   border: 0px;
+   margin: 2px;
+   padding: 2px;
+   background-color:rgba(0, 0, 0, 30%);
+   border-radius:5px;
+}
+#Backlight > SliderDialog > QToolButton:hover {
+   background-color:rgba(0,0,0,70%);
+   color: white;
+   border-radius:3px;
+}
+#Backlight > SliderDialog {
+   background-color:#2e2f2f;
+   margin: 2px;
+   padding: 2px;
+}
+#Backlight > SliderDialog > QSlider {
+    margin: 2px;
+    padding: 2px;
+}
+#Backlight > SliderDialog > QSlider::groove:vertical {
+   background: hsv(0, 0, 9);
+   width: 8px;
+   border-radius: 3px;
+}
+#Backlight > SliderDialog > QSlider::handle:vertical {
+   height: 10px;
+   background: grey;
+   border-radius: 2px;
+   margin: 0 -4px; /* expand outside the groove */
+}
+#Backlight > SliderDialog > QSlider::add-page:vertical {
+   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #adadad, stop:1 #d1dedd);
+   border: 1px solid palette(text);
+   border-radius: 3px;
+}
+#Backlight > SliderDialog > QSlider::sub-page:vertical {
+   background: rgba(0, 0, 0, 80%);
+   border-radius: 3px;
+}
 /*
 Calendar Widget
 */
@@ -356,6 +385,10 @@ QCalendarWidget QWidget {
    alternate-background-color: #151414;/*  week and day frame */
    background-color:black;/* background of  buttons and year/month */
    border-radius:2px;
+}
+/* months menu background should be restored -- it's changed above because of inheritance */
+QCalendarWidget QMenu {
+   background:rgba(100, 100, 100, 50%);
 }
 QCalendarWidget #qt_calendar_navigationbar {
    background:black;
@@ -449,22 +482,20 @@ KbIndicator
    border-radius:3px;
 }
 /*
- * WorldClock
- */
-/*#WorldClock {
-   margin: 2px;
-   padding: 2px;
-   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3e3f3f, stop:1 #2e2f2f);
-}
-#WorldClock:hover {
-   background-color:qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #4a4a4a, stop:1 #909e9a);
-   border: 1px solid #939393;
-   border-radius:3px;
+ *
+ */WorldClock
+/*
+WorldClock
+*/
+#WorldClock {
+   background-color:#0a0a0a;
 }
 #WorldClock QLabel {
    margin: 2px;
-   color: palette(window);
-}*/
+   padding:4px;
+   color: #DEDEDE;
+   background-color:#0a0a0a;
+}
 /*
  * SysStat
 */

@@ -3,14 +3,15 @@
  */
 
 Notification {
-   background-color:rgba(0, 0, 0, 40%);
+   background-color:rgba(0, 0, 0, 60%);
+   color: #cbcbcb;
    border: 1px solid black;
    border-radius:4px;
    padding: 1px;
 }
 
 QLabel {
-   color: palette(window);
+   color: white;
 }
 
 QToolButton {
@@ -27,7 +28,6 @@ QToolButton:focus {
 
 QToolButton:hover {
    border: 0px solid hsv(0, 0, 240);
-   margin: 2px;
    padding: 2px;
 }
 
@@ -40,7 +40,7 @@ QToolButton:pressed {
 }
 
 #appLabel {
-   color: palette(window);
+   color: #e6e6e6;
 }
 
 #closeButton {
