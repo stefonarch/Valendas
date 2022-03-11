@@ -1,22 +1,23 @@
 /*
-Valendas - Translucent dark theme for LXQt
-++++++++++
-Note that a compositor (p.e. compton) has to be enabled
+Valendas - Translucent dark theme for LXQt by stefonarch (standreas@riseup.net)
+A compositor has to be enabled for transparency; not all widget styles support menu transparency
 ++++++++++++++++++
 
 /*
 General panel settings
 */
 LXQtPanel #BackgroundWidget{
-   background:transparent;
+   background-color:rgba(40, 40, 40, 60%);
 }
 
 QToolTip {
    border: 0px solid #4C4C4C;
-   background:rgba(0, 0, 0, 96%);
+   background:rgba(50, 50, 50, 60%);
    color: #dce7f5;
-   padding: 1px;
+   padding: 2px;
    margin: 0px;
+   border: 1px solid white;
+   border-radius: 5px;
 }
 
 /*
@@ -45,7 +46,7 @@ Plugin > QToolButton:hover,
 Plugin > QWidget > QToolButton:hover,
 LXQtPanelPlugin > QToolButton:hover {
    color: #eef5fc;
-   background:rgba(0, 0, 0, 45%)
+   background:rgba(5, 0, 0, 45%)
 }
 
 Plugin > QToolButton:pressed,
@@ -57,7 +58,7 @@ LXQtPanelPlugin > QToolButton:pressed {
 Menus
 */
 QMenu {
-   background:rgba(100, 100, 100, 50%);
+   background:rgba(100, 100, 100, 40%);
    border-radius:3px;
 }
 
@@ -68,21 +69,21 @@ QMenu::icon {
 }
 
 QMenu::item {
-   color: #f1f3f3;
+   color: #e6e8e8;
    border: 1px solid transparent;
    padding: 5px 30px 5px 10px;
-   background:rgba(0, 0, 0, 55%);
+   background:rgba(5, 0, 0, 55%);
 }
 
-QMenu::item:selected {
-   background:rgba(0, 0, 0, 80%);
-   color:white;
+QMenu::item:selected, QMenu::item:hover {
+   background:rgba(185, 200, 210, 80%);
+   color: black;
    border-bottom:1px solid black;
    border-top:1px solid black;
 }
 
 QMenu::item:disabled {
-   color:#bfc1c1;
+   color:#a9abab;
 }
 
 QMenu::right-arrow {
@@ -95,7 +96,7 @@ QMenu::separator {
    height:1px
 }
 QMenu QToolButton {
-   background-color: rgba(0, 0, 0, 80%);
+   background-color: rgba(5, 0, 0, 80%);
    padding: 5px;
    border: transparent;
    font: bold;
@@ -116,21 +117,21 @@ Main menu plugin
    color:#ebebeb;
 }
 #MainMenu:hover {
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
 }
 #MainMenu:pressed {
-   padding: 3px;
+   padding: 1px;
 }
 #MainMenu QLineEdit {
    margin: 0;
    padding: 6px;
    color: white;
    border-radius: 0px;
-   background:rgba(0, 0, 0, 75%);
+   background:rgba(5, 0, 0, 75%);
 }
 #MainMenu ActionView {
    border: none;
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    margin-right:5px;
    margin-top:5px;
 }
@@ -138,14 +139,14 @@ Main menu plugin
    background-color:#7e7e7e;
    border: 1px solid transparent;
    padding: 2px;
-   color:black;
+   color: black;
 }
 #MainMenu ActionView::item:hover {
-   background-color:rgba(0, 0, 0, 20%);
-   color:white;
+   background-color:rgba(5, 0, 0, 60%);
+   color: white;
 }
 #MainMenu ActionView::item:selected{
-   background-color:rgba(0, 0, 0, 70%);
+   background-color:rgba(5, 0, 0, 70%);
    color:white;
 }
 /*
@@ -164,7 +165,7 @@ QuickLaunch
    border-radius:4px;
 }
 #QuickLaunch QToolButton:hover{
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    border: 1px solid black;
    border-radius:3px;
 }
@@ -193,7 +194,8 @@ TaskBar
    padding: 4px;
 }
 #TaskBar QToolButton[urgent="true"] {
-   border: 1px solid #fe2327;
+   border-bottom: 2px solid #e23b1d;
+   font-weight: bold;
 }
 #TaskBar LXQtGroupPopup {
    background: rgba(100, 100, 100, 80%);
@@ -223,7 +225,7 @@ Mount plugin
    border-radius:3px;
 }
 #LXQtMountPlugin QToolButton:hover {
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    border: 1px solid black;
    border-radius:3px;
 }
@@ -231,33 +233,39 @@ Mount plugin
    border-top: 2px;
 }
 #LXQtMountPopup {
-   background-color: palette(text);
-   padding: 4px;
-   border-radius_3px;
+   border: 0px solid #4C4C4C;
+   background:rgba(50, 50, 50, 50%);
+   color: #dce7f5;
+   padding: 2px;
+   margin: 0px;
+   border: 1px solid white;
+   border-radius: 5px;
 }
 #LXQtMountPopup > MenuDiskItem {
    border-radius: 3px;
 }
 #LXQtMountPopup > MenuDiskItem:hover {
+   background-color:rgba(5, 0, 0, 45%);
 }
 #LXQtMountPopup #EjectButton,
 #LXQtMountPopup #DiskButton {
    qproperty-iconSize: 22px;
    background-color: transparent;
    border: none;
-   color: palette(window);
+   color: #b9b9b9;
    padding: 6px;
    border-radius:3px;
 }
 #LXQtMountPopup #EjectButton:hover,
 #LXQtMountPopup #DiskButton:hover {
-   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #adadad, stop:1 #d1dedd);
-   color:palette(text);
+   background-color: grey;
+   color:black;
 }
 #LXQtMountPopup #NoDiskLabel {
    margin: 6px;
-   color: palette(window);
+   color: #dce7f5;
 }
+
 /*
 Volume plugin
 */
@@ -265,11 +273,11 @@ Volume plugin
    border: 0px;
    margin: 2px;
    padding: 2px;
-   background-color:rgba(0, 0, 0, 10%);
+   background-color:rgba(5, 0, 0, 10%);
    border-radius:5px;
 }
 #VolumePlugin QToolButton:hover {
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    border: 1px solid black;
 }
 #VolumePlugin QToolButton:pressed {
@@ -311,7 +319,7 @@ VolumePopup  > QSlider::add-page:vertical {
    border-radius: 3px;
 }
 VolumePopup  > QSlider::sub-page:vertical {
-   background: rgba(0, 0, 0, 80%);
+   background: rgba(5, 0, 0, 80%);
    border-radius: 3px;
 }
 
@@ -319,7 +327,7 @@ VolumePopup  > QSlider::sub-page:vertical {
  * Backlight
  */
 #BacklightPlugin QToolButton:hover {
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    border: 1px solid black;
 }
 #BacklightPlugin QToolButton:pressed {
@@ -329,7 +337,7 @@ VolumePopup  > QSlider::sub-page:vertical {
    border: 0px;
    margin: 2px;
    padding: 2px;
-   background-color:rgba(0, 0, 0, 30%);
+   background-color:rgba(5, 0, 0, 30%);
    border-radius:5px;
 }
 #Backlight > SliderDialog > QToolButton:hover {
@@ -363,9 +371,10 @@ VolumePopup  > QSlider::sub-page:vertical {
    border-radius: 3px;
 }
 #Backlight > SliderDialog > QSlider::sub-page:vertical {
-   background: rgba(0, 0, 0, 80%);
+   background: rgba(5, 0, 0, 80%);
    border-radius: 3px;
 }
+
 /*
 Calendar Widget
 */
@@ -374,7 +383,7 @@ QCalendarWidget QAbstractItemView:enabled {
    selection-background-color: #a6abab;
    selection-color:black;
    border-radius: 4px;
-   background-color:rgba(0, 0, 0, 50%);
+   background-color:rgba(5, 0, 0, 50%);
    border: 1px solid black;
    border-radius:3px;
 }
@@ -425,10 +434,10 @@ ShowDesktop
    border: 0px;
    margin: 2px;
    padding: 2px;
-   background:rgba(0, 0, 0, 10%);
+   background:rgba(5, 0, 0, 10%);
 }
 #ShowDesktop:hover {
-   background-color:rgba(0, 0, 0, 55%);
+   background-color:rgba(5, 0, 0, 55%);
    border: 1px solid black;
    border-radius:3px;
 }
@@ -441,28 +450,28 @@ Desktopswitch
 #DesktopSwitch QToolButton {
    margin: 2px;
    color: #cccccc;
-   background-color:rgba(0, 0, 0, 10%);
+   background-color:rgba(5, 0, 0, 10%);
    padding:3px;
    border-radius:3px;
 }
 #DesktopSwitch QToolButton:on {
-   background-color:rgba( 0, 0, 0, 50%);
+   background-color:rgba( 5, 0, 0, 50%);
    color:white;
    border: 1px solid #939393;
    padding:3px;
 }
 #DesktopSwitch QToolButton:hover {
-   background-color:rgba(0, 0, 0, 45%);
+   background-color:rgba(5, 0, 0, 45%);
    border: 1px solid #939393;
-
 }
 #DesktopSwitch QToolButton:pressed {
    border-top: 2px solid #4c4c4c;
 }
 #DesktopSwitch QToolButton[urgent="true"] {
-   color: palette(highlighted-text);
-   background: palette(highlight);
+   border-bottom: 2px solid #e23b1d;;
+   font-weight: bold;
 }
+
 /*
 KbIndicator
  */
@@ -475,26 +484,25 @@ KbIndicator
    color: #c1c1c1;
 }
 #KbIndicator QLabel:enabled {
-   background-color:rgba( 0, 0, 0, 50%);
+   background-color:rgba( 5, 0, 0, 50%);
    border: 1px solid #939393;
    color:white;
    padding:3px;
    border-radius:3px;
 }
-/*
- *
- */WorldClock
+
 /*
 WorldClock
 */
 #WorldClock {
-   background-color:#0a0a0a;
+   color: #eef5fc;
+   background:#424242;
 }
 #WorldClock QLabel {
    margin: 2px;
    padding:4px;
-   color: #DEDEDE;
-   background-color:#0a0a0a;
+   color: #eef5fc;
+   background:#424242;
 }
 /*
  * SysStat
@@ -502,7 +510,6 @@ WorldClock
 #SysStat {
    padding: 1px 1px 1px 1px;
 }
-
 #SysStat > QLabel {
    font-size: 6pt;
 }
@@ -567,6 +574,6 @@ WorldClock
    border-radius:2px;
    padding: 1px;
    margin:3px;
-   background: rgba(0, 0, 0, 10%);
+   background: rgba(5, 0, 0, 10%);
    color: white;
 }

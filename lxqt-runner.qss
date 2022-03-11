@@ -1,13 +1,14 @@
 /*
 Popup
 */
-
 #panel {
-   background-color:rgba(0, 0, 0, 60%);
+   background-color:rgba(5, 0, 0, 50%);
    border: 1px solid #878a8a;
+   border-radius:5px;
    padding: 2px;
    margin: 0px;
 }
+
 /*
 Buttons
  */
@@ -37,16 +38,17 @@ QToolButton:hover {
 }
 
 /*
-Search field
+Search fieldaspe
 */
 #commandEd {
    border: 1px solid #878a8a;
    padding: 6px;
    margin: 2px;
-   background: rgba(0, 0, 0, 65%);
+   background: rgba(5, 0, 0, 65%);
    border-radius:2px;
    color:#f0f0f0;
-   selection-background-color: rgba(70, 70, 70, 40%);
+   selection-color: #d6d6d6;
+   selection-background-color: rgba(70, 70, 70, 90%);
 }
 
 /*
@@ -55,11 +57,11 @@ Search results list
 #commandList {
    border: 1px solid #878a8a;
    border-top:1px solid transparent;
-   background:rgba(20, 20, 20, 50%);
-   alternate-background-color:rgba(40, 40, 40, 50%);
+   background:rgba(20, 20, 20, 70%);
+   alternate-background-color:rgba(40, 40, 40, 70%);
    color: #b4b4b4;
    selection-color: #e5e5e5;
-   selection-background-color:rgba(0, 0, 0, 60%);
+   selection-background-color:rgba(5, 0, 0, 80%);
 }
 /*
 Menu
@@ -79,7 +81,7 @@ QMenu::item {
    color: #d3d3d3;
    border: 1px solid transparent;
    padding: 5px 30px 5px 10px;
-   background:rgba(0, 0, 0, 75%);
+   background:rgba(5, 0, 0, 75%);
 }
 
 QMenu::item:selected {

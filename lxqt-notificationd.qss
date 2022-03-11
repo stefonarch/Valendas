@@ -3,10 +3,10 @@
  */
 
 Notification {
-   background-color:rgba(0, 0, 0, 60%);
+   background-color:rgba(5, 0, 0, 70%);
    color: #cbcbcb;
    border: 1px solid black;
-   border-radius:4px;
+   border-radius:5px;
    padding: 1px;
 }
 

@@ -2,11 +2,15 @@
  * lxqt-sudo dialog
  */
 
- #PasswordDialog {
-background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #adadad, stop:1 #d1dedd);}
+QLabel {
+   background:rgba(0, 0, 0, 75%);
+}
+#PasswordDialog {
+   background:rgba(0, 0, 0, 75%);
+}
 
 #descriptionL,#descCommandL,#commandL,#descPasswordL {
-    color:#5a5a5as
+    color: #f1f3f3;
 }
 
 #errorL {
