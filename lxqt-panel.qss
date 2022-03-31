@@ -154,6 +154,7 @@ QuickLaunch
 */
 #QuickLaunchPlaceHolder {
    color: #e4ebec;
+   background:#3a3a3a;
    margin:5px;
 }
 #QuickLaunch QToolButton{
@@ -166,7 +167,7 @@ QuickLaunch
 }
 #QuickLaunch QToolButton:hover{
    background-color:rgba(5, 0, 0, 45%);
-   border: 1px solid black;
+   border: 1px solid grey;
    border-radius:3px;
 }
 #QuickLaunch QToolButton:pressed {
@@ -468,7 +469,7 @@ Desktopswitch
    border-top: 2px solid #4c4c4c;
 }
 #DesktopSwitch QToolButton[urgent="true"] {
-   border-bottom: 2px solid #e23b1d;;
+   border-bottom: 2px solid #e23b1d;
    font-weight: bold;
 }
 
@@ -496,13 +497,13 @@ WorldClock
 */
 #WorldClock {
    color: #eef5fc;
-   background:#424242;
+   background:#2f2f2f;
 }
 #WorldClock QLabel {
    margin: 2px;
    padding:4px;
    color: #eef5fc;
-   background:#424242;
+   background:#2f2f2f;
 }
 /*
  * SysStat
@@ -555,25 +556,4 @@ WorldClock
    background-repeat: repeat-x;
    margin-right: 2px;
    margin-left: 2px;
-}
-/*
- * Color Picker
- */
-#ColorPickerPlugin QToolButton{
-   qproperty-icon: url(color-picker.svg);
-   margin: 3px;
-   padding: 2px;
-}
-#ColorPickerPlugin QToolButton:hover {
-   padding:3px;
-   border: 1px solid #939393;
-   border-radius:3px;
-}
-#ColorPickerPlugin QLineEdit {
-   border: 1px solid grey;
-   border-radius:2px;
-   padding: 1px;
-   margin:3px;
-   background: rgba(5, 0, 0, 10%);
-   color: white;
 }
