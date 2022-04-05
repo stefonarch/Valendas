@@ -155,7 +155,8 @@ QuickLaunch
 #QuickLaunchPlaceHolder {
    color: #e4ebec;
    background:#3a3a3a;
-   margin:5px;
+   padding: 0 5px;
+   font-size: 11pt;
 }
 #QuickLaunch QToolButton{
    border: 0px;
