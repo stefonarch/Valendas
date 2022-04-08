@@ -4,4 +4,7 @@ Translucent theme for the LXQt Desktop
 
 Copy Valendas folder to /usr/share/lxqt/themes/ for system wide use or to ~/.local/share/lxqt/themes/ for single user.
 
-Note that a compositor has to be enabled to make transparency work.
+A compositor has to be enabled to make transparency work - and not all widget styles support transparency everywhere,
+breeze or oxygen do.
+
+This theme is included in LXQt 1.1.0
